@@ -9,6 +9,7 @@ export interface StudentIDsSliceState {
   classData: Class[];
   studentObj: StudentObj;
 }
+
 interface StudentObj {
   [key: string]: string;
 }
@@ -45,7 +46,9 @@ export interface Student {
   createdTime: string;
   fields: StudentFields;
 }
+
 const initialState: StudentIDsSliceState = { classData: [], studentObj: {} };
+
 const API_KEY = "key4gFSX1z7mgkSDa";
 const BASE_URL = "https://api.airtable.com/v0/app8ZbcPx7dkpOnP0";
 
@@ -61,6 +64,7 @@ const studentIdsSlice = createSlice({
     },
   },
 });
+
 export const getClassesWithStudentsId =
   (classids: string[]): AppThunk =>
   async (dispatch) => {
@@ -118,6 +122,7 @@ export const getStudentForClasses =
           },
         }
       );
+      
       const studentObj: StudentObj = {};
       console.log("response for 3rd api", response.data);
       response.data.records.forEach((student) => {

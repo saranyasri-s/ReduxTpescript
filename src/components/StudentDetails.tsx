@@ -1,13 +1,10 @@
-import React, { useEffect } from "react";
 import { FC } from "react";
 import { StudentIDsSliceState } from "../store/studentIds";
 import { classIDsActions } from "../store/classIDsSlice";
 import { useAppDispatch } from "../store";
 import { studentSliceActions } from "../store/studentSlice";
 import classes from "./StudentDetails.module.css";
-interface ClassObj {
-  [key: string]: string[];
-}
+
 export const StudentDetails: FC<StudentIDsSliceState> = ({
   classData,
   studentObj,
@@ -34,6 +31,7 @@ export const StudentDetails: FC<StudentIDsSliceState> = ({
       })}
     </div>
   ));
+
   return (
     <>
       {/* dispalying the class name with list of students */}

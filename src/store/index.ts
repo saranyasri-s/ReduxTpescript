@@ -3,6 +3,7 @@ import { studentSliceReducer } from "./studentSlice";
 import { classIDsSliceReducer } from "./classIDsSlice";
 import { studentIDsSliceReducer } from "./studentIds";
 import { useSelector, useDispatch, TypedUseSelectorHook } from "react-redux";
+
 export const store = configureStore({
   reducer: {
     studentInput: studentSliceReducer,
@@ -10,6 +11,7 @@ export const store = configureStore({
     studentIdsandClassnames: studentIDsSliceReducer,
   },
 });
+
 export default store;
 type RootState = ReturnType<typeof store.getState>;
 

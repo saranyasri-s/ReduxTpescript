@@ -8,7 +8,6 @@ import {
 import "./App.css";
 import { StudentDetails } from "./components/StudentDetails";
 import { classIDsActions } from "./store/classIDsSlice";
-import { callbackify } from "util";
 
 function App() {
   const dispatch = useAppDispatch();

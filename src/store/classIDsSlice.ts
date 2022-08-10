@@ -2,7 +2,6 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AppThunk } from ".";
 import axios from "axios";
 import { studentSliceActions } from "./studentSlice";
-import { sensitiveHeaders } from "http2";
 
 // slice to store loading state (while api call), logged in state
 // and class ids which are fetched when student name is sent to the airtable
@@ -33,6 +32,7 @@ const initialState: ClassIDsSliceState = {
   isLoggedIn: false,
   isLoading: false,
 };
+
 const API_KEY = "key4gFSX1z7mgkSDa";
 const BASE_URL = "https://api.airtable.com/v0/app8ZbcPx7dkpOnP0";
 

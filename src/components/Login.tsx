@@ -12,11 +12,9 @@ export const Login = (props: Props) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     let studentName: string = e.target.value;
-    // let capitalisedStudentName: string =
-    //   studentName[0].toUpperCase() + studentName.substring(1);
-
     dispatch(studentSliceActions.addStudent(studentName));
   };
+
   const handleSubmit = (e: React.BaseSyntheticEvent) => {
     e.preventDefault();
     if (studentName.trim().length >= 1) {

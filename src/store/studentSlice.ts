@@ -5,9 +5,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 interface studentSliceState {
   studentName: string;
 }
+
 const initialState: studentSliceState = {
   studentName: "",
 };
+
 const studentSlice = createSlice({
   name: "student",
   initialState,
@@ -20,5 +22,6 @@ const studentSlice = createSlice({
     },
   },
 });
+
 export const studentSliceReducer = studentSlice.reducer;
 export const studentSliceActions = studentSlice.actions;
